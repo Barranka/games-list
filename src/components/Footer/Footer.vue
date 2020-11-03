@@ -35,11 +35,9 @@
 <script>
 export default {
   data () {
-    return { 
+    return {
       menuItems: ["О нас", "Помощь", "Репититорам"]
     }
-  },
-  methods: {
   }
 };
 </script>
