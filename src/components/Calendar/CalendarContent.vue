@@ -83,7 +83,6 @@ export default {
       padding: 10px 22px;
       background-color:#F9F8FC;
       color: #8E8E93;
-
       cursor: pointer;
       &:first-child {
         border-radius: 10px 0px 0px 10px;
