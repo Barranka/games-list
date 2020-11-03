@@ -128,6 +128,7 @@ export default {
               descr: "Любой пол, среднее образование",
               findConversation: true,
               type: "Беседа",
+              openTabMenu: false
             },
             {
               date: {
