@@ -48,6 +48,9 @@ ul, li {
   max-width: $desktopWidth;
   margin: 0 auto;
   padding: 0 60px;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 0 10px;
+  }
 }
 .container-content {
   margin-top: 94px;
