@@ -1,20 +1,18 @@
 <template>
-  <div class="wrapper-content wrapper-content--fixed">
-    <section>
-      <div class="container">
-        <h1>Home page</h1>
-        <p>{{message}}</p>
-      </div>
-    </section>
+  <div class="container container-content">
+    <calendarContent />
   </div>
 </template>
 
 <script>
+import calendarContent from "@/components/Calendar/CalendarContent.vue"
+
+
 export default {
-  computed: {
-    message () {
-      return this.$store.getters.getMessage
-    }
-  }
-};
+  components: {
+    calendarContent,
+  },
+}
 </script>
+
+

@@ -5,38 +5,85 @@
   right: 0;
   z-index: 99;
   padding: 20px 0;
-  background-color: #ffffff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  &.logo {
-    font-size: 24px;
-  }
+  background-color: $main;
+  color: $white;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.navbar-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-item {
-  margin-right: 30px;
-  cursor: pointer;
-  &:last-child {
-    margin-right: 0;
+  position: relative;
+  .navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $smDesktopWidth) {
+      display: none;
+    }
   }
-}
-
-.navbar-link {
-  display: block;
-  color: #aaaad5;
-  // active link
-  &.active {
-    color: #4343aa;
+  .navbar-item {
+    margin-right: 30px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .navbar-link {
+    display: block;
+    color: $white;
+    font-weight: 500;
+    line-height: 19px;
+    &.router-link-exact-active {
+      color: #8E8E93;
+    }
+  }
+  .info-auth {
+    display: flex;
+    @media screen and (max-width: $smDesktopWidth) {
+      display: none;
+    }
+    &__avatar {
+      .image {
+        border-radius: 50%;
+      }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      .buttons-info {
+        display: flex;
+        margin-top: 7px;
+      }
+      .left, .right {
+        background-color: $white;
+        color: $main;
+        padding: 2px 6px;
+        border-radius: 100px 0 0 100px;
+        border-right: 1px solid $border-base;
+        cursor: pointer;
+      }
+      .right {
+        border-radius: 0 100px 100px 0;
+      }
+    }
+  }
+  .mobile-button {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 35%;
+    background: url('~@/assets/images/navbar/mobile-menu.svg') no-repeat;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    @media screen and (max-width: $smDesktopWidth) {
+      display: flex;
+    }
   }
 }

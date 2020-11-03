@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper-content wrapper-content--fixed">
+  <div class="container-content">
     <section>
       <div class="container">
-        <h1 class="title">PAGE NOT FOUND!</h1>
-		<p>Go to <router-link class="link" to="/">main page?</router-link></p>
+        <h1 class="title">Страница не найдена!</h1>
+		    <div>Вернуться <router-link class="link" to="/"> на главную?</router-link></div>
       </div>
     </section>
   </div>
@@ -11,12 +11,18 @@
 
 <style lang="scss" scoped>
 
-.wrapper-content {
-	min-width: 80vh;
-	display: flex;
+.container {
+  margin: 50px auto;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
+  text-align: center;
+  font-size: 30px;
+  .link {
+    color: #103D97;
+  }
 }
 
 </style>
