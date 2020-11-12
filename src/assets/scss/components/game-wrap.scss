@@ -1,17 +1,21 @@
 .games-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .game-item {
-    width: 192px;
-    height: 195px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    &:nth-child(5) {
-        margin-right: 0;
+  width: 192px;
+  height: 195px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: $white;
+  &:nth-child(5) {
+    margin-right: 0;
+  }
+  &:nth-child(6) {
+    margin-left: 10px;
+    @media screen and (max-width: $tableWidth ) {
+      margin-left: 0;
     }
-    &:nth-child(6) {
-        margin-left: 10px;
-    }
+  }
 }

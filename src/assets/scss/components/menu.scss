@@ -1,34 +1,46 @@
-.menu-list {
+.menu-wrap {
   display: flex;
+  flex-wrap: wrap;
 }
 .menu-item {
   height: 96px;
-  max-width: 163px;
+  max-width: 162px;
   width: 100%;
-  background: #0E152F;
+  background: $background-item;
   margin-right: 11px;
+  margin-top: 11px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-}
-.active {
-  border-bottom:1px solid #F3B233;
+  @media screen and (max-width: $phoneWidth ) {
+    width: 50px;
+    height: 50px;
+  }
 }
 .menu-link {
   padding: 24px 30px;
-  color: #FFFFFF;
+  color: $white;
   height: 100%;
   font-weight: bold;
   font-size: 12px;
   line-height: 124.2%;
   text-align: center;
   text-transform: uppercase;
+  &__icon {
+    @media screen and (max-width: $phoneWidth ) {
+      width: 10px;
+    }
+  }
   &__title {
     margin-top: 13px;
   }
-}
-.test {
-  color: #ffffff;
-  font-size: 24px;
+  &.router-link-exact-active {
+    border-bottom:1px solid $main;
+  }
+  @media screen and (max-width: $phoneWidth ) {
+    font-size: 7px;
+    padding: 5px;
+  }
+  
 }
