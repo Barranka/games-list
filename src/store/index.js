@@ -58,39 +58,39 @@ export default new Vuex.Store({
 		},
 		setLiveCasino({commit}, liveCasino) {
 			axios
-      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25')
+      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25&categories=Live%20Casino')
       		.then(response => {
       		  let liveCasino = response.data;
       		  commit('setLiveCasino', liveCasino)
       		});
 		},
-		setSlotsGames ({commit}, slotsGames) {
+		setSlotsGames({commit}, slotsGames) {
 			axios
-      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25&is_hot')
+      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25&categories=Slot')
       		.then(response => {
       		  let slotsGames = response.data;
       		  commit('setSlotsGames', slotsGames)
       		});
 		},
-		setRouletteGames ({commit}, rouletteGames) {
+		setRouletteGames({commit}, rouletteGames) {
 			axios
-      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25')
+      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25&categories=Roulette')
       		.then(response => {
       		  let rouletteGames = response.data;
       		  commit('setRouletteGames', rouletteGames)
       		});
 		},
-		setTableGames ({commit}, tableGames) {
+		setTableGames({commit}, tableGames) {
 			axios
-      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25')
+      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25&categories=Live%20Casino')
       		.then(response => {
       		  let tableGames = response.data;
       		  commit('setTableGames', tableGames)
       		});
 		},
-		setCardGames ({commit}, cardGames) {
+		setCardGames({commit}, cardGames) {
 			axios
-      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25')
+      		.get('https://57d10932-44d0-4d3a-98a9-6dda8c67bdd3.mock.pstmn.io/?liveCasinoOnly=true&limit=25&categories=Card%20Games')
       		.then(response => {
       		  let cardGames = response.data;
       		  commit('setCardGames', cardGames)
