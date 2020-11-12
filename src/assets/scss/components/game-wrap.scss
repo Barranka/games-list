@@ -1,21 +1,20 @@
 .games-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  @media screen and (max-width: $desktopWidth ) {
+    justify-content: space-between;
+  }
 }
 .game-item {
-  width: 192px;
+  width: 194px;
   height: 195px;
   margin-right: 10px;
   margin-bottom: 10px;
   background-color: $white;
-  &:nth-child(5) {
+  &:nth-child(6n+6) {
     margin-right: 0;
-  }
-  &:nth-child(6) {
-    margin-left: 10px;
-    @media screen and (max-width: $tableWidth ) {
-      margin-left: 0;
+    @media screen and (max-width: $desktopWidth ) {
+      margin-right: 10px;
     }
   }
 }
